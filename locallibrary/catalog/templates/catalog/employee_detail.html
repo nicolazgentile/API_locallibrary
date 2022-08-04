@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>ID: {{ tipejo.identification }}</h1>
+<div class="main">
+
+    <!-- Specify fields to be displayed -->
+    {{ tipejo.first_name }} {{ tipejo.last_name }} ({{ tipejo.user }})
+    <ul>
+        <br/>{{ tipejo.category }}
+        <br/>{{ clave }}<br/><br/>
+    </ul>
+    <a href="{% url 'employee-update' tipejo.pk%}" type='button' class='btn btn-success pull-right'>Editar</a>
+</div>
+{% endblock %}
